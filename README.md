@@ -11,7 +11,6 @@ A simple Note-Taking App built with Flutter, Firebase, and Provider for state ma
 ✔ Provider for State Management
 ✔ MVVM Folder Structure
 ✔ Clean UI with Material Design
-
 🚀 Getting Started
 1️⃣ Prerequisites
 Ensure you have the following installed:
