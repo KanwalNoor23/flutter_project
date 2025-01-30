@@ -20,15 +20,10 @@ Flutter SDK
 Firebase CLI
 Git
 2️⃣ Clone the Repository
-sh
-Copy
-Edit
 git clone https://github.com/<your-github-username>/flutter_note_app.git
 cd flutter_note_app
 3️⃣ Install Dependencies
-sh
-Copy
-Edit
+
 flutter pub get
 4️⃣ Setup Firebase
 Create a Firebase Project
@@ -36,40 +31,25 @@ Enable Authentication (Email/Password)
 Enable Cloud Firestore
 Download and add your google-services.json (Android) & GoogleService-Info.plist (iOS) to the android/app/ and ios/Runner/ directories respectively.
 Initialize Firebase in your project:
-sh
-Copy
-Edit
 flutterfire configure
 5️⃣ Run the App
-sh
-Copy
-Edit
 flutter run
 📁 Project Structure (MVVM)
-css
-Copy
-Edit
 flutter_note_app/
-│── lib/
-│   ├── main.dart
-│   ├── models/
-│   │   ├── note_model.dart
-│   ├── providers/
-│   │   ├── auth_provider.dart
-│   │   ├── note_provider.dart
-│   ├── services/
-│   │   ├── firebase_service.dart
-│   ├── screens/
-│   │   ├── auth_screen.dart
-│   │   ├── home_screen.dart
-│── pubspec.yaml
-│── README.md
+lib/
+main.dart
+models/
+note_model.dart
+providers/
+auth_provider.dart
+note_provider.dart
+services/
+firebase_service.dart
+screens/
+auth_screen.dart
+ home_screen.dart
+ pubspec.yaml─ README.md
 🔒 Firestore Security Rules
-Ensure only authenticated users can access their own notes.
-
-json
-Copy
-Edit
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
